@@ -6,10 +6,27 @@
     margin: 0;
 }
 
-html, body, #container { height: 100%; width: 100%; }
+html, body, .app-root, .router-outlet, #container { height: 100%; width: 100%; }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: #000000de;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100vh;
+}
+   
+app-root {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    display: block;
 }

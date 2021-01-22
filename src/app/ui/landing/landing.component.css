@@ -1,6 +1,14 @@
+:host {
+    position: absolute;
+}
+
+:host, #container {
+    height: 100%;
+    width: 100%;
+}
+
 #container {
     text-align: center;
-    padding-top: 100px;
     color: white;
     background-image: url("/assets/party.png");
     background-position: center center;
@@ -10,7 +18,7 @@
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    position: relative;
+    padding-top: 100px;
 }
 
 .slogan {
@@ -18,7 +26,7 @@
 }
 
 .buttons-container {
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 button {
@@ -44,7 +52,7 @@ button {
     right: 50px;
     display: none;
 }
-
+ 
 @keyframes hello {
     from {
         padding-top: 110px;

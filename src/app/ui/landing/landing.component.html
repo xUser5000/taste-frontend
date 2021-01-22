@@ -1,6 +1,6 @@
 <div id="container">
 
-    <div>
+    <div class="logo">
         <img src="assets/music.png" height="300" >
     </div>
 
@@ -10,8 +10,8 @@
     </div>
 
     <div class="buttons-container">
-        <button mat-raised-button color="primary">LOG IN</button>
-        <button mat-raised-button color="primary">REGISTER</button>
+        <button mat-raised-button color="primary" (click)="go('/login')">LOG IN</button>
+        <button mat-raised-button color="primary" (click)="go('/register')">REGISTER</button>
     </div>
 
     <div class="title">
@@ -21,4 +21,5 @@
     <div class="about">
         <button mat-stroked-button color="primary">ABOUT</button>
     </div>
+
 </div>
