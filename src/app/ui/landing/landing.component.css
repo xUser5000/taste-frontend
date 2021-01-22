@@ -1,0 +1,58 @@
+#container {
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    background-image: url("/assets/party.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: hello;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+.slogan {
+    font-size: 30px;
+}
+
+.buttons-container {
+    margin-top: 30px;
+}
+
+button {
+    margin: 0 10px;
+    width: 100px;
+    height: 45px;
+}
+
+.title {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+} .title h1 {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.about {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: none;
+}
+
+@keyframes hello {
+    from {
+        padding-top: 110px;
+        opacity: 0;
+    }
+
+    to {
+        padding-top: 100px;
+        opacity: 1;
+    }
+}
