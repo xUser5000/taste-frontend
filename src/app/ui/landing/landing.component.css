@@ -10,10 +10,6 @@
 #container {
     text-align: center;
     color: white;
-    background-image: url("/assets/party.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     animation-name: hello;
     animation-duration: 1s;
     animation-iteration-count: 1;

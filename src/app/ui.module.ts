@@ -3,10 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 import { LandingComponent } from './ui/landing/landing.component';
 import { LoginComponent } from './ui/login/login.component';
 import { RegisterComponent } from './ui/register/register.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   { path: "landing", component: LandingComponent },
@@ -17,8 +24,14 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    BrowserModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
