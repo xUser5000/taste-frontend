@@ -10,6 +10,7 @@ export class RegisterComponent implements OnInit {
   username: string = "";
   email: string = "";
   password: string = "";
+  gender: string = "";        // If gender="", then the user has not selected a gender yet
   hide = true;
 
   constructor(private router: Router) {

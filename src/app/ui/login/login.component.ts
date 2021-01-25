@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   username: string = "";
   password: string = "";
-  hide = true;
+  hide: boolean = true;
 
   constructor(private router: Router) {
   }

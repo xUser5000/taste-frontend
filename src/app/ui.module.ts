@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 
 import { LandingComponent } from './ui/landing/landing.component';
 import { LoginComponent } from './ui/login/login.component';
@@ -31,6 +33,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatRadioModule,
+    MatSelectModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],
