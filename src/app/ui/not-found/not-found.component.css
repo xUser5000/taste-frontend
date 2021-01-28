@@ -1,0 +1,20 @@
+#container {
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+}
+
+#container > * {
+    padding-top: 25px;
+}
+
+h1 {
+    font-size: 150px;
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+p {
+    font-size: 20px;
+    padding-top: 20px;
+}
