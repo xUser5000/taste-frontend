@@ -12,12 +12,18 @@
 
 .username {
     padding-right: 20px;
+    cursor: default;
+    user-select: none;
 }
 
 .avatar {
     height: 100%;
     width: 50px;
     position: relative;
+    cursor: pointer;
+    transition-duration: 0.5s;
+} .avatar:hover {
+    background-color: #2d2d2d;
 }
 
 .avatar > * {

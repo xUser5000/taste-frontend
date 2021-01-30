@@ -6,8 +6,20 @@
     <span class="spacer"></span>
 
     <span class="username">Abdallah Ahmed</span>
-    <span class="avatar">
+    <span class="avatar" [matMenuTriggerFor]="menu">
         <app-avatar url="/assets/avatar.png" small="true"></app-avatar>
     </span>
+
+    <!-- Options menu -->
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>account_circle</mat-icon>
+            <span>Profile</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Log out</span>
+        </button>
+    </mat-menu>
 
 </mat-toolbar>
