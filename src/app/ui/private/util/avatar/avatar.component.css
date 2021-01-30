@@ -1,0 +1,14 @@
+img {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.small {
+    height: 35px;
+    width: 35px;
+}
+
+.large {
+    height: 70px;
+    width: 70px;
+}
