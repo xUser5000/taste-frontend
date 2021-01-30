@@ -6,14 +6,17 @@
     padding-left: 20px;
 }
 
+.search-box {
+    height: 100%;
+    margin-left: 20px;
+}
+
 .spacer {
     flex: 1 1 auto;
 }
 
-.username {
-    padding-right: 20px;
-    cursor: default;
-    user-select: none;
+.search {
+    padding-left: 20px;
 }
 
 .avatar {

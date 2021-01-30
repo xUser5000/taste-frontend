@@ -49,6 +49,15 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
-  declarations: [LandingComponent, LoginComponent, RegisterComponent, NotFoundComponent, PrivateComponent, TopNavComponent, SideNavComponent, AvatarComponent]
+  declarations: [
+    LandingComponent,
+    LoginComponent,
+    RegisterComponent,
+    NotFoundComponent,
+    PrivateComponent,
+    TopNavComponent,
+    SideNavComponent,
+    AvatarComponent
+  ]
 })
 export class UiModule { }
