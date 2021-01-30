@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { UiModule } from './ui.module';
+import { UiModule } from './ui/ui.module';
 import { AppComponent } from './app.component';
 import { ServiceModule } from './service/service.module';
 import { BrowserModule } from '@angular/platform-browser';
