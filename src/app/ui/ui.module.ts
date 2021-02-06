@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from "@angular/material/menu";
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
@@ -21,13 +23,27 @@ import { PrivateComponent } from './private/private.component';
 import { TopNavComponent } from './private/util/top-nav/top-nav.component';
 import { SideNavComponent } from './private/util/side-nav/side-nav.component';
 import { AvatarComponent } from './private/util/avatar/avatar.component';
+import { HomeComponent } from './private/page/home/home.component';
+import { FavoritesComponent } from './private/page/favorites/favorites.component';
+import { UploadComponent } from './private/page/upload/upload.component';
 
-
+/**
+ * Routes of the entire application
+ */
 const routes: Routes = [
   { path: "landing", component: LandingComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "private", component: PrivateComponent },
+  {
+    path: "private",
+    component: PrivateComponent,
+    children: [
+      { path: "home", component: HomeComponent },
+      { path: "favorites", component: FavoritesComponent },
+      { path: "upload", component: UploadComponent },
+      { path: "**", redirectTo: "home" }
+    ]
+  },
   { path: "404", component: NotFoundComponent },
   { path: "", redirectTo: "landing", pathMatch: "full" },
   { path: "**", redirectTo: "404" }
@@ -45,6 +61,8 @@ const routes: Routes = [
     MatRadioModule,
     MatSelectModule,
     MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],
@@ -57,7 +75,10 @@ const routes: Routes = [
     PrivateComponent,
     TopNavComponent,
     SideNavComponent,
-    AvatarComponent
+    AvatarComponent,
+    HomeComponent,
+    FavoritesComponent,
+    UploadComponent
   ]
 })
 export class UiModule { }

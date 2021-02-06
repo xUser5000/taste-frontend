@@ -1,1 +1,11 @@
-<app-top-nav></app-top-nav>
+<div id="container">
+
+    <app-top-nav (onNavToggle)="toggleNav($event)"></app-top-nav>
+
+    <main>
+
+        <app-side-nav [open]="navOpen"></app-side-nav>
+
+    </main>
+
+</div>

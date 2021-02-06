@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivateComponent implements OnInit {
 
+  public navOpen: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public toggleNav(event: boolean): void {
+    this.navOpen = event;
   }
 
 }

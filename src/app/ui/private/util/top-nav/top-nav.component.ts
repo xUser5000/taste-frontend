@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
+  private navOpen: boolean = true;
+  @Output() onNavToggle: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  public toggleNav (): void {
+    this.navOpen = !this.navOpen;
+    this.onNavToggle.emit(this.navOpen);
+  } 
 
 }
