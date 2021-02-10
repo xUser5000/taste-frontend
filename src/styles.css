@@ -18,6 +18,10 @@ body {
     background-size: cover;
 }
 
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
 body {
     padding: 0;
     margin: 0;
@@ -27,7 +31,7 @@ body {
     align-items: stretch;
     height: 100vh;
 }
-   
+
 app-root {
     order: 0;
     flex: 1 1 auto;

@@ -1,0 +1,8 @@
+.card {
+    max-width: 100%;
+}
+  
+.avatar {
+    background-image: url('/assets/gon.png');
+    background-size: cover;
+}

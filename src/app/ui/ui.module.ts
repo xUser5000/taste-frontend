@@ -26,6 +26,7 @@ import { AvatarComponent } from './private/util/avatar/avatar.component';
 import { HomeComponent } from './private/page/home/home.component';
 import { FavoritesComponent } from './private/page/favorites/favorites.component';
 import { UploadComponent } from './private/page/upload/upload.component';
+import { SongCardComponent } from './private/util/song-card/song-card.component';
 
 /**
  * Routes of the entire application
@@ -78,7 +79,8 @@ const routes: Routes = [
     AvatarComponent,
     HomeComponent,
     FavoritesComponent,
-    UploadComponent
+    UploadComponent,
+    SongCardComponent
   ]
 })
 export class UiModule { }
