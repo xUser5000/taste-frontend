@@ -1,9 +1,12 @@
 #container {
     display: flex;
     flex-flow: column;
-    height: 100%;
+    overflow: auto;
 }
 
 main {
+    height: 100%;
+    width: 100%;
     flex: 1 1 auto;
+    overflow: auto;
 }

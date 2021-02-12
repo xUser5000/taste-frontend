@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SideNavService } from 'src/app/service/side-nav.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,9 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
 
-  @Input() open: boolean = true;      // Just a default value
+  public open: boolean;
 
-  ngOnInit(): void {
+  constructor (private sideNavService: SideNavService) {
+    this.open = this.sideNavService.getValue();
   }
 
+  ngOnInit(): void {
+    this.sideNavService.getObservable().subscribe(res => this.open = res);
+  }
+
+  onStateChanged (event: boolean): void {
+    this.sideNavService.setValue(event);
+  }
 }

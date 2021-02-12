@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -12,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
@@ -27,6 +29,7 @@ import { HomeComponent } from './private/page/home/home.component';
 import { FavoritesComponent } from './private/page/favorites/favorites.component';
 import { UploadComponent } from './private/page/upload/upload.component';
 import { SongCardComponent } from './private/util/song-card/song-card.component';
+import { SongGridComponent } from './private/util/song-grid/song-grid.component';
 
 /**
  * Routes of the entire application
@@ -53,6 +56,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
@@ -64,6 +68,7 @@ const routes: Routes = [
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
+    MatGridListModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],
@@ -80,7 +85,8 @@ const routes: Routes = [
     HomeComponent,
     FavoritesComponent,
     UploadComponent,
-    SongCardComponent
+    SongCardComponent,
+    SongGridComponent
   ]
 })
 export class UiModule { }

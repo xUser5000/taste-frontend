@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SideNavService } from 'src/app/service/side-nav.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,17 +8,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  private navOpen: boolean = true;
-  @Output() onNavToggle: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  constructor() { }
+  constructor (private sideNavService: SideNavService) { }
 
   ngOnInit(): void {
   }
 
   public toggleNav (): void {
-    this.navOpen = !this.navOpen;
-    this.onNavToggle.emit(this.navOpen);
-  } 
+    this.sideNavService.toggle();
+  }
 
 }
