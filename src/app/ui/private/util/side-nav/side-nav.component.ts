@@ -21,4 +21,8 @@ export class SideNavComponent implements OnInit {
   onStateChanged (event: boolean): void {
     this.sideNavService.setValue(event);
   }
+
+  closeNav (): void {
+    this.sideNavService.setValue(false);
+  }
 }
