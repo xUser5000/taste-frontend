@@ -41,3 +41,20 @@
     left: 0;
     padding: 50px;
 }
+
+@media only screen and (max-width: 720px) {
+    .back-container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    #container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card {
+        padding: 30px 15px;
+    }
+}
